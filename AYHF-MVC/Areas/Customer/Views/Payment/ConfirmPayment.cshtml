@@ -1,0 +1,21 @@
+﻿@model int
+
+<div class="container row pt-4">
+    <div class="col-12 text-center">
+        <h1 class="text-primary text-center">Order Placed Successfully</h1>
+        <h1 class="text-primary text-center">PAYMENT GOES HERE (TO BE UPDATED)</h1>
+        Your order number is: @Model
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <a asp-controller="Payment" asp-action="GenerateReceipt" asp-route-orderId="@Model" class="btn btn-primary form-control">Confirm Payment</a>
+
+    </div>
+    <div class="col-6">
+
+        <a asp-controller="Payment" asp-action="Cancel" asp-route-orderId="@Model" class="btn btn-outline-secondary border form-control">Cancel</a>
+    </div>
+
+</div>
